@@ -1,0 +1,61 @@
+.container {
+    position: absolute;
+    max-width: 400px;
+    top: 92px;
+    left: -1%;
+    height: 250%;
+}
+
+.container img {
+    width: 431%;
+    height: 110%;
+}
+
+p {
+    position: absolute;
+    top: 500px;
+    text-align: center;
+    left: -120%;
+    font-family: Georgia, serif;
+    font-size: 37px;
+    font-size: xx-large;
+    word-spacing: 6px;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    width: 2900px;
+    height: 1000px;
+    letter-spacing: 30px;
+    text-decoration-line: underline;
+}
+
+.container .btn {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 195px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 300;
+    font-size: large;
+    font-weight: bold;
+}
+
+.container .btn:hover {
+    background: -webkit-linear-gradient(to right, #852424, #4d4747, #272323, #6b6068);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #852424, #806c6c, #6a8a7f, #635860);
+    width: 180px;
+    color: rgb(255, 255, 255);
+}

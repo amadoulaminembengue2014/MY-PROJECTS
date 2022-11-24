@@ -1,0 +1,62 @@
+<div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h3 class="h4 font-weight-bold text-theme">Please Log this account</h3>
+                                </div>
+
+                                <form [formGroup]="loginForm" (ngSubmit)="loginEmployee()">
+
+
+                                    <div class="form-outline mb-4">
+                                        <strong> <label class="form-label" name="email" [(ngModel)]="employee.emailId" for="form2Example11">Email Id</label></strong>
+                                        <input type="emailId" id="emailId" formControlName="emailId" class="form-control" placeholder="email address" />
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="emailId && emailId.invalid && emailId.touched">*Enter valid Email Address</span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <strong> <label for="exampleInputEmail1" name="password" [(ngModel)]="employee.password" class="form-label">Password</label></strong>
+                                        <input formControlName="password" placeholder="Enter Correct Password" type="password" class="form-control" id="password">
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="password && password.invalid && password.touched">This fiel is not valid</span>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-outline-danger">Create new</button>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                        <p class="mb-0 me-2">Don't have an account?</p>
+                                        <a style="color:blue; margin-top: 10px;" routerLink="/signup">New User ? Click to SignUp !</a>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+            <!-- end row -->
+
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>

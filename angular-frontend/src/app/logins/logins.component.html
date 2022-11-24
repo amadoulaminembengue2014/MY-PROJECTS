@@ -1,0 +1,56 @@
+<div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <strong><h1 class="h4 font-weight-bold text-theme">Administration</h1></strong>
+                                </div>
+                                <h6 class="h5 mb-0">Just Do Login.</h6><br>
+
+                                <form [formGroup]="loginsForm" (ngSubmit)="logins()">
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11">Email Id</label>
+                                        <input type="emailId" id="emailId" formControlName="emailId" class="form-control" placeholder="email address" />
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="emailId && emailId.invalid && emailId.touched">*Enter valid Email Address</span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label for="exampleInputEmail1" class="form-label">Password</label>
+                                        <input formControlName="password" placeholder="Enter Correct Password" type="password" class="form-control" id="password">
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="password && password.invalid && password.touched">This fiel is not valid</span>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11">Role</label>
+                                        <input type="role" id="role" formControlName="role" class="form-control" placeholder="Role" />
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="role && role.invalid && role.touched">*Enter only characters</span>
+                                    </div>
+                                    <button type="submit" [disabled]="loginsForm.invalid" class="btn btn-theme">LoginAdmin</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+
+                                    <h3>--- Manager ---</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+            <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="login.html" class="text-primary ml-1">login</a></p>
+            <!-- end row -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>

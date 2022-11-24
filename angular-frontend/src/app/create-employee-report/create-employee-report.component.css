@@ -1,0 +1,30 @@
+.col-md-8 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    width: 800px;
+    margin-left: 10%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.container-fluid {
+    position: absolute;
+    top: 92px;
+    right: 10px;
+    left: 0px;
+    background-image: url("../../assets/image/llllll.jpg");
+    width: 120%;
+    height: 230%;
+    padding: 20em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h3 {
+    color: rgb(214, 192, 192);
+    position: absolute;
+    top: 0;
+    left: -10%;
+}

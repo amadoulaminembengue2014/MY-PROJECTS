@@ -1,0 +1,6 @@
+.btn:hover {
+    background: -webkit-linear-gradient(to right, #852424, #d8363a, #d8363a, #6b6068);
+    background: linear-gradient(to right, #852424, #d8363a, #d8363a, #635860);
+    width: 180px;
+    color: rgb(255, 255, 255);
+}

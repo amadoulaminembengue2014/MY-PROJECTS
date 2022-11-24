@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="search-employee">
+                <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Employees">
+            </div>
+            <div class="col-md-6">
+                <div class="card " *ngFor="let employee of employees | filter:searchText">
+                    <div class="card list-group-item-success">
+                        <div class="card-body">
+                            <div class="row align-items-center"><span><img [src]="employee.image" class="avatar avatar-xl mr-3" alt=""></span>
+                                <div class="media-body overflow-hidden">
+                                    <h5 class="card-text mb-0">{{employee.firstName}}</h5>
+                                    <p class="card-text text-uppercase text-muted">{{employee.lastName}}</p>
+                                    <p class="card-text">
+                                        {{employee.emailId}}<br>
+                                    </p>
+                                    <strong><p class="card-text text-uppercase text-muted">{{employee.jobTitle}}</p></strong>
+                                </div>
+
+                            </div>
+                            <td>
+                                <button (click)="updateEmployee(employee.id)" class="btn btn-dark">Update</button>
+                                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                                <button (click)="employeeDetails(employee.id)" class="btn" style="margin-left: 10px; background-color: rgb(121, 111, 111); color: rgb(255, 255, 255);">View details</button>
+                            </td>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

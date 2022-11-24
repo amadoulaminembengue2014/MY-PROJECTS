@@ -1,0 +1,36 @@
+.search-employee {
+    position: absolute;
+    left: 899px;
+    top: 70px;
+    width: 20%;
+}
+
+button {
+    width: 120px;
+    display: flex;
+    margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgb(94, 49, 49);
+    font-weight: 700;
+}
+
+tr {
+    width: 1618px;
+    color: rgb(0, 0, 0);
+}
+
+tr:hover {
+    background: linear-gradient(to right, #0a167a, #272999, #4857d8, #9092e4);
+    width: 1618px;
+    color: #ddd;
+}

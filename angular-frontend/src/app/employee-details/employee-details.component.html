@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>View Details Employee</h3>
+    <div><br>
+        <div class="card-container">
+
+            <span><img [src]="employee.image" class="avatar avatar-xl mr-3" alt=""></span>
+
+            <label><b>First Name:&nbsp;&nbsp;</b></label>{{employee.firstName}}
+        </div><br>
+        <div>
+            <label><b>Last Name:&nbsp;&nbsp;</b></label>{{employee.lastName}}
+        </div><br>
+        <div>
+            <label><b>Email Id:&nbsp;&nbsp;</b></label>{{employee.emailId}}
+        </div><br>
+        <div>
+            <label class="card-text text-uppercase text-muted"><b>Job Title:&nbsp;&nbsp;</b></label>{{employee.jobTitle}}
+        </div>
+    </div>
+</div><br><br>
+
+<button routerLink="/employees" routerLinkActive="active" class="nav-link" class="btn ">Return to list</button>

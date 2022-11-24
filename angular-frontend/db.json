@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signup": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "emailId": "",
+      "password": "25032014",
+      "id": 1
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "emailId": "",
+      "password": "65875763545",
+      "id": 2
+    },
+    {
+      "firstName": "Lamine",
+      "lastName": "Mbengue",
+      "emailId": "amadoulaminembengue05@gmail.com",
+      "password": "867535567",
+      "id": 3
+    },
+    {
+      "firstName": "Mariama",
+      "lastName": "Ba",
+      "emailId": "mariama@gmail.com",
+      "password": "250311",
+      "id": 4
+    },
+    {
+      "firstName": "Sidy",
+      "lastName": "Gueye",
+      "emailId": "sidy@gmail.com",
+      "password": "123456789",
+      "id": 5
+    },
+    {
+      "firstName": "Mahmout",
+      "lastName": "Sade",
+      "emailId": "mahmout@gmail.com",
+      "password": "12345678",
+      "id": 6
+    },
+    {
+      "firstName": "Aladji",
+      "lastName": "Gora Diop",
+      "emailId": "gora@gmail.com",
+      "password": "1234567",
+      "id": 7
+    }
+  ],
+  "comments ": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

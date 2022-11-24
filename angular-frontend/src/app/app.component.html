@@ -1,0 +1,49 @@
+<div role="navigation">
+    <div class="">
+        <div class="brand-logo">
+            <a href=""><img src="https://tse3.mm.bing.net/th?id=OIP.aZHWePxlo9y4yAYC2gL-NQHaFj&pid=Api&P=0" /></a>
+        </div>
+        <div class="brand-phone">
+
+        </div>
+        <div class="text-center">
+            <nav class="top-bar-wrap">
+                <ul class="top-bar">
+                    <li class="nav-item">
+                        <i class="fa-solid fa-house-laptop"></i> <a routerLink="home" routerLinkActive="active" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="employees" routerLinkActive="active" class="nav-link">Employees List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="reports" routerLinkActive="active" class="nav-link">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="create-employee-report" routerLinkActive="active" class="nav-link">Create Report</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropbtn" routerLink="about" routerLinkActive="active">About</a>
+                        <div class="dropdown-content">
+                            <a routerLink="timesheet" routerLinkActive="active" href="#">Appointment</a>
+                            <a routerLink="login-role" routerLinkActive="active" href="#">Users</a>
+                        </div>
+                    </li>
+                </ul>
+                <button routerLink="/login" type="button" class="btn btn-primary btn-rounded">Login Out</button>
+            </nav>
+            <nav class="main-nav-wrap">
+
+            </nav>
+        </div>
+    </div>
+</div><br>
+<h1 class=" text-center ">
+
+    {{title}}</h1><br><br>
+<div class="container ">
+    <router-outlet></router-outlet>
+</div>

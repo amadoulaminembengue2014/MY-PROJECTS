@@ -1,0 +1,30 @@
+.container-fluid {
+    position: absolute;
+    top: 92px;
+    right: 10px;
+    left: 0px;
+    background-image: url("../../assets/image/llllll.jpg");
+    width: 120%;
+    height: 230%;
+    padding: 20em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.col-md-8 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    width: 900px;
+    margin-left: 10%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+h3 {
+    color: rgb(206, 209, 226);
+    position: absolute;
+    top: 0;
+    left: -10%;
+}

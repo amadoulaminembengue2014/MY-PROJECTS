@@ -1,0 +1,56 @@
+<div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h2 class="h4 font-weight-bold text-theme">USERS</h2>
+                                </div>
+
+
+
+                                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input formControlName="email" placeholder="Enter Email" type="email" class="form-control" id="email" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="email && email.invalid && email.touched">*Enter valid Email Address</span>
+                                    </div><br>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input formControlName="password" placeholder="Enter Password" type="password" class="form-control" id="password" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="password && password.invalid && password.touched">This field is not valid</span>
+                                    </div><br><br><br>
+
+                                    <div class="d-flex justify-content-center ">
+                                        <button type="submit" class="btn btn-outline-danger">Login Users</button>
+                                    </div><br>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+                                    <h4 class=" font-weight-bold text-white mb-4">This beautiful theme yours!</h4>
+                                    <p class="lead text-white">"Best investment i made for a long time. Can only recommend it for other users."</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+            <!-- end row -->
+
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>

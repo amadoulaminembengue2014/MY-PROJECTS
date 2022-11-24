@@ -1,0 +1,30 @@
+.container {
+    position: absolute;
+    top: 115px;
+    right: 10px;
+    left: 0px;
+    background-image: url("../../assets/image/llllll.jpg");
+    width: 120%;
+    height: 150%;
+    padding: 20em;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.col-md-8 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    width: 800px;
+    margin-left: 10%;
+    position: absolute;
+    top: 85px;
+    left: 65px;
+}
+
+h3 {
+    color: rgb(206, 209, 226);
+    position: absolute;
+    top: -50px;
+    left: -19%;
+}

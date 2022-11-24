@@ -1,0 +1,210 @@
+.top-bar .nav-item {
+    display: inline-block;
+}
+
+nav {
+    padding: 0px;
+}
+
+nav.top-bar-wrap {
+    background: #0d0b4d;
+}
+
+.top-bar-wrap {
+    height: 40px;
+    line-height: 40px;
+}
+
+.main-nav-wrap {
+    height: 80px;
+    line-height: 80px;
+}
+
+nav.main-nav-wrap {
+    background: #7c86b8;
+    font-size: 1.25rem
+}
+
+nav.top-bar-wrap ul,
+nav.main-nav-wrap ul {
+    margin-bottom: 0px;
+    margin-top: 0px
+}
+
+a.nav-link:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-left: 12px solid rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-style: normal;
+}
+
+a.nav-link {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    transform: skew(-25deg);
+    transition: all 400ms ease-out;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 1.4px;
+    word-spacing: 2.0px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+a .inner-link {
+    display: inline-block;
+    transform: skew(25deg)
+}
+
+.nav-link {
+    padding: 0px;
+}
+
+.top-bar-wrap a {
+    padding-left: 0px;
+}
+
+.main-nav-wrap a {
+    padding-left: 18px;
+}
+
+.brand-logo img {
+    height: 40px;
+    transform: skew(25deg)
+}
+
+.brand-phone a {
+    display: block;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+    height: 40px;
+    line-height: 1.5em;
+    transform: skew(25deg)
+}
+
+.brand-phone,
+.brand-logo {
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    height: 120px;
+    transform: skewX(-25deg);
+}
+
+.brand-logo {
+    left: -30px;
+    padding-left: 70px;
+    background: #4155b1;
+    border-right: 2px solid #4155b1;
+}
+
+.brand-logo img {
+    width: 150px;
+    height: 121px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 20px;
+}
+
+.brand-phone {
+    right: 0;
+    right: -30px;
+    padding-right: 70px;
+    background: #aeb7cf;
+    border-left: 3px solid #092346;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(121, 80, 80);
+    background: -webkit-linear-gradient(to right, #141a77, #141a77, #565a97, #7a7eb1);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #141a77, #141a77, #565a97, #7a7eb1);
+    width: 180px;
+    color: rgb(255, 255, 255);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(177, 34, 34, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background: -webkit-linear-gradient(to right, #141a77, #141a77, #565a97, #7a7eb1);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #141a77, #141a77, #565a97, #7a7eb1);
+    color: aliceblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn {
+    position: absolute;
+    top: 70px;
+    right: 8px;
+    background: #0f1d69;
+    width: 100px;
+    height: 46px;
+}
+
+.btn:hover {
+    position: absolute;
+    top: 65px;
+    right: 8px;
+    background: #ffffff;
+    color: #0f1d69;
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 500;
+    font-family: Georgia, serif;
+    font-size: 51px;
+    letter-spacing: 4px;
+    word-spacing: 4.4px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    text-shadow: 0px 11px 3px rgba(0, 0, 0, 0.22);
+}

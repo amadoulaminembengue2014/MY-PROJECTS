@@ -1,0 +1,61 @@
+<div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h3 class="h4 font-weight-bold text-theme">Register</h3>
+                                </div>
+                                <h6 class="h5 mb-0">Just Do Register.</h6>
+                                <p class="text-muted mt-2 mb-5">If You Really Want To Know, Look In The Register.</p>
+                                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                                    <div class="mb-3">
+                                        <label class="form-label">FirstName</label>
+                                        <input formControlName="firstName" placeholder="Enter FirstName" type="text" class="form-control" id="firstName" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="firstName && firstName.invalid && firstName.touched">*Enter only characters</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">LastName</label>
+                                        <input formControlName="lastName" placeholder="Enter LastName" type="text" class="form-control" id="lastName" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="lastName && lastName.invalid && lastName.touched">*Enter only characters</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">EmailId</label>
+                                        <input formControlName="emailId" placeholder="Enter EmailId" type="emailId" class="form-control" id="emaild" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="emailId && emailId.invalid && emailId.touched">*Enter valid Email Address</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input formControlName="password" placeholder="Enter Password" type="password" class="form-control" id="password" required>
+                                        <span style="color: rgb(190, 17, 17);" *ngIf="password && password.invalid && password.touched">This field is not valid</span>
+                                    </div><br>
+                                    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-theme">Register</button>
+                                </form>
+                                <strong> <a routerLink="/login">Already Member ? Click to login !</a> </strong>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+                                    <h4 class="text-white mb-4">This beautiful theme yours!</h4>
+                                    <p class="lead text-white">"Best investment i made for a long time. Can only recommend it for other users."</p>
+                                    <p>- Admin User</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card-body -->
+            </div>
+            <!-- end card -->
+            <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="login.html" class="text-primary ml-1">login</a></p>
+            <!-- end row -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- Row -->
+</div>

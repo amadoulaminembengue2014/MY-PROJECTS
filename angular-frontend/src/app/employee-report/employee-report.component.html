@@ -1,0 +1,47 @@
+<h3>View Report Employee</h3>
+<div id="content" #content><br>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <label><b>First Name&nbsp;&nbsp;</b></label>{{employee.firstName}}
+                </td>
+                <td>
+                    <label><b>Last Name&nbsp;&nbsp;</b></label>{{employee.lastName}}
+                </td>
+                <td>
+                    <label><b>Date Of Birth&nbsp;&nbsp;</b></label>{{employee.dateOfBirth}}
+                </td>
+                <td>
+                    <label><b>Email Id&nbsp;&nbsp;</b></label>{{employee.emailId}}
+                </td>
+                <td>
+                    <label><b>Telephone&nbsp;&nbsp;</b></label>{{employee.telephone}}
+                </td>
+                <td>
+                    <label><b>Address&nbsp;&nbsp;</b></label>{{employee.address}}
+                </td>
+                <td>
+                    <label><b>Department&nbsp;&nbsp;</b></label>{{employee.department}}
+                </td>
+                <td>
+                    <label><b>Gender&nbsp;&nbsp;</b></label>{{employee.gender}}
+                </td>
+                <td>
+                    <label><b>Salary&nbsp;&nbsp;</b></label>{{employee.salary}}
+                </td>
+                <td>
+                    <label><b>Date Hired&nbsp;&nbsp;</b></label>{{employee.dateHired}}
+                </td>
+                <td>
+                    <label><b>Job Title&nbsp;&nbsp;</b></label>{{employee.jobTitle}}
+                </td>
+            </tr>
+        </thead>
+    </table><br>
+
+
+    <button type="button" class="btn btn-secondary btn-lg" (click)="makePdf()">Print Reports</button><br><br>
+</div>
+
+<button routerLink="/reports" routerLinkActive="active" class="nav-link" class="btn ">Return to </button>

@@ -1,0 +1,63 @@
+.container .btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #0b0d88;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 300;
+    font-size: large;
+    font-weight: bold;
+}
+
+.container .btn:hover {
+    background: -webkit-linear-gradient(to right, #fff, #fff, #fff, #fff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #fff, #fff, #fff, #fff);
+    width: 180px;
+    color: rgb(0, 0, 0);
+}
+
+.container img {
+    position: absolute;
+    top: 115px;
+    left: 0px;
+    width: 108%;
+    height: 600px;
+}
+
+.vlm .btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 300;
+    font-size: large;
+    font-weight: bold;
+}
+
+.vlm .btn:hover {
+    background: -webkit-linear-gradient(to right, #1c2497, #1c2497, #1c2497, #1c2497);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #1c2497, #1c2497, #1c2497, #1c2497);
+    width: 180px;
+    color: rgb(255, 255, 255);
+}

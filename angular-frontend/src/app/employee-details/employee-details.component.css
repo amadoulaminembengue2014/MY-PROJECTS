@@ -1,0 +1,21 @@
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #0f2b47 no-repeat center/cover;
+    position: relative;
+    text-align: center;
+    color: #1d2c3b;
+    font-weight: 600;
+    vertical-align: bottom;
+}
+
+.btn:hover {
+    background: -webkit-linear-gradient(to right, #852424, #d8363a, #d8363a, #6b6068);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #852424, #d8363a, #d8363a, #635860);
+    width: 180px;
+    color: rgb(255, 255, 255);
+}
