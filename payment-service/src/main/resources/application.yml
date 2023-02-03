@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 spring:
  application:
    name: PAYMENT-SERVICE
@@ -13,4 +14,21 @@ spring:
    
    
    logging:
+=======
+spring:
+ application:
+   name: PAYMENT-SERVICE
+   
+ eureka: 
+   client: 
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+   instance:
+    hostname: localhost
+   
+   
+   logging:
+>>>>>>> 41d800b8c58ee17a9957d985d53e4b53ee67a7e3
     file: C:\Users\VLMtechSolution\Desktop\logs\microservice.log
