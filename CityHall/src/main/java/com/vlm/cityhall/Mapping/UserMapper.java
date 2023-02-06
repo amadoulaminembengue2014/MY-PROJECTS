@@ -8,6 +8,7 @@ import com.vlm.cityhall.ENTITY.User;
 import com.vlm.cityhall.model.Father;
 import com.vlm.cityhall.model.Man;
 import com.vlm.cityhall.model.Mother;
+import com.vlm.cityhall.model.Parent;
 import com.vlm.cityhall.model.Woman;
 import com.vlm.cityhall.wrapper.Fatherdto;
 import com.vlm.cityhall.wrapper.Mandto;
@@ -29,7 +30,6 @@ public class UserMapper {
 		user.setPassword(userWrapper.getPassword());
 		user.setStatus(userWrapper.getStatus());
 		user.setRole(userWrapper.getRole());
-		user.setTel(userWrapper.getTel());
 		return user;
 	}
 	
@@ -44,7 +44,6 @@ public class UserMapper {
 		userWrapper.setPassword(user.getPassword());
 		userWrapper.setStatus(user.getStatus());
 		userWrapper.setRole(user.getRole());
-		userWrapper.setTel(user.getTel());
 		return userWrapper;
 	}
 //Woman convert----------------------------------------
@@ -57,9 +56,6 @@ public class UserMapper {
 		woman.setLastName(womandto.getLastName());
 		woman.setPassword(womandto.getPassword());
 		woman.setRole(womandto.getRole());
-		woman.setTel(womandto.getTel());
-		woman.setStatus(womandto.getStatus());
-		woman.setWedding(womandto.getWedding());
 		return woman;
 	}
 	
@@ -73,9 +69,6 @@ public class UserMapper {
 		womandto.setLastName(woman.getLastName());
 		womandto.setPassword(woman.getPassword());
 		womandto.setRole(woman.getRole());
-		womandto.setTel(woman.getTel());
-		woman.setStatus(womandto.getStatus());
-		womandto.setWedding(woman.getWedding());
 		return womandto;
 	}
 //Man convert---------------------------------------------
@@ -88,9 +81,6 @@ public class UserMapper {
 		man.setLastName(mandto.getLastName());
 		man.setPassword(mandto.getPassword());
 		man.setRole(mandto.getRole());
-		man.setTel(mandto.getTel());
-		man.setStatus(mandto.getStatus());
-		man.setWedding(mandto.getWedding());
 		return man;
 	}
 	
@@ -104,42 +94,33 @@ public class UserMapper {
 		mandto.setLastName(man.getLastName());
 		mandto.setPassword(man.getPassword());
 		mandto.setRole(man.getRole());
-		mandto.setTel(man.getTel());
-		mandto.setStatus(man.getTel());
-		mandto.setWedding(man.getWedding());
-		mandto.setTel(man.getTel());
 		return mandto;
 	}
 //parent convert------------------------------------------
-//	public Parent dtoToEntity(Parentdto parentdto) {
-//		Parent parent = new Parent();
-//		parent.setBirthDay(LocalDate.parse(parentdto.getBirthDay()));
-//		parent.setBirthPlace(parentdto.getBirthPlace());
-//		parent.setEmail(parentdto.getEmail());
-//		parent.setFirstName(parentdto.getFirstName());
-//		parent.setLastName(parentdto.getLastName());
-//		parent.setPassword(parentdto.getPassword());
-//		parent.setRole(parentdto.getRole());
-//		parent.setTel(parentdto.getTel());
-//		parent.setStatus(parentdto.getStatus());
-//		parent.setTel(parentdto.getTel());
-//		return parent;
-//	}
-//	
-//	public Parentdto EntityTodto(Parent parent) {
-//		Parentdto parentdto = new Parentdto();
-//		parentdto.setId(parent.getId());
-//		parentdto.setBirthDay(parent.getBirthDay().toString());
-//		parentdto.setBirthPlace(parent.getBirthPlace());
-//		parentdto.setEmail(parent.getEmail());
-//		parentdto.setFirstName(parent.getFirstName());
-//		parentdto.setLastName(parent.getLastName());
-//		parentdto.setPassword(parent.getPassword());
-//		parentdto.setRole(parent.getRole());
-//		parentdto.setTel(parent.getTel());
-//		parentdto.setStatus(parent.getStatus());
-//		return parentdto;
-//	}
+	public Parent dtoToEntity(Parentdto parentdto) {
+		Parent parent = new Parent();
+		parent.setBirthDay(LocalDate.parse(parentdto.getBirthDay()));
+		parent.setBirthPlace(parentdto.getBirthPlace());
+		parent.setEmail(parentdto.getEmail());
+		parent.setFirstName(parentdto.getFirstName());
+		parent.setLastName(parentdto.getLastName());
+		parent.setPassword(parentdto.getPassword());
+		parent.setRole(parentdto.getRole());
+		return parent;
+	}
+	
+	public Parentdto EntityTodto(Parent parent) {
+		Parentdto parentdto = new Parentdto();
+		parentdto.setId(parent.getId());
+		parentdto.setBirthDay(parent.getBirthDay().toString());
+		parentdto.setBirthPlace(parent.getBirthPlace());
+		parentdto.setEmail(parent.getEmail());
+		parentdto.setFirstName(parent.getFirstName());
+		parentdto.setLastName(parent.getLastName());
+		parentdto.setPassword(parent.getPassword());
+		parentdto.setRole(parent.getRole());
+		return parentdto;
+	}
 //Father convert-----------------------------------------
 	public Father dtoToEntity(Fatherdto fatherdto) {
 		Father father = new Father();
@@ -150,8 +131,6 @@ public class UserMapper {
 		father.setLastName(fatherdto.getLastName());
 		father.setPassword(fatherdto.getPassword());
 		father.setRole(fatherdto.getRole());
-		father.setTel(fatherdto.getTel());
-		father.setStatus(fatherdto.getStatus());
 		return father;
 	}
 	
@@ -165,8 +144,6 @@ public class UserMapper {
 		fatherdto.setLastName(father.getLastName());
 		fatherdto.setPassword(father.getPassword());
 		fatherdto.setRole(father.getRole());
-		fatherdto.setTel(father.getTel());
-		fatherdto.setStatus(father.getStatus());
 		return fatherdto;
 	}
 	//Mother convert-----------------------------------------
@@ -179,8 +156,6 @@ public class UserMapper {
 		mother.setLastName(motherdto.getLastName());
 		mother.setPassword(motherdto.getPassword());
 		mother.setRole(motherdto.getRole());
-		mother.setTel(motherdto.getTel());
-		mother.setStatus(motherdto.getStatus());
 		return mother;
 	}
 	
@@ -194,8 +169,6 @@ public class UserMapper {
 		motherdto.setLastName(mother.getLastName());
 		motherdto.setPassword(mother.getPassword());
 		motherdto.setRole(mother.getRole());
-		motherdto.setTel(mother.getTel());
-		motherdto.setStatus(mother.getStatus());
 		return motherdto;
 	}
 }

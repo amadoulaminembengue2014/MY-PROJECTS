@@ -17,7 +17,6 @@ public class CertificateOfDeathMapper {
 		certificateOfDeath.setCause_of_death(certificateOfDeathdto.getCause_of_death());
 		certificateOfDeath.setDate_of_death(LocalDate.parse(certificateOfDeathdto.getDate_of_death()));
 		certificateOfDeath.setId(certificateOfDeathdto.getId());
-		certificateOfDeath.setUser(certificateOfDeathdto.getUser());
 		return certificateOfDeath;
 	}
 	
@@ -26,7 +25,6 @@ public class CertificateOfDeathMapper {
 		certificateOfDeathdto.setCause_of_death(certificateOfDeath.getCause_of_death());
 		certificateOfDeathdto.setDate_of_death(certificateOfDeath.getDate_of_death().toString());
 		certificateOfDeathdto.setId(certificateOfDeath.getId());
-		certificateOfDeathdto.setUser(certificateOfDeath.getUser());
 		return certificateOfDeathdto;
 	}
 }

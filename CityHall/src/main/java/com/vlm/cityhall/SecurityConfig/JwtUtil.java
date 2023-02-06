@@ -50,7 +50,7 @@ private String secret = "ndeyekane";
 				.setClaims(claims)
 				.setSubject(Subject)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + 10 * 60 * 1000))
+				.setExpiration(new Date(System.currentTimeMillis() + 5 * 60 * 1000))
 				.signWith(SignatureAlgorithm.HS256, secret)
 				.compact();
 	}

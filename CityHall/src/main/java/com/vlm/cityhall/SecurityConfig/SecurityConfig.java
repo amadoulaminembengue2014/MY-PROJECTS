@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -36,8 +35,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
+	public PasswordEncoder passwordEncoder() {
+		return NoOpPasswordEncoder.getInstance();
 	}
 	
 	@Override
@@ -46,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.and()
 		.csrf().disable()
 		.authorizeRequests()
-		.antMatchers("/user/signup","/user/login", "/person/**", "/mother/**", "/father/**", "/woman/**", "/send_mail")
+		.antMatchers("/user/signup","/user/login","/user/changePassword")
 		.permitAll()
 		.anyRequest()
 		.authenticated()
@@ -57,6 +56,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 	  http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 	}
-	
 
 }
