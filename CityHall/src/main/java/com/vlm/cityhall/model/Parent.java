@@ -6,5 +6,5 @@ import com.vlm.cityhall.ENTITY.User;
 
 @Entity
 
-public class Parent extends User {
+abstract class Parent extends User {
 }

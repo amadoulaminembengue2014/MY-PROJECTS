@@ -1,5 +1,16 @@
 package com.vlm.cityhall.wrapper;
 
-public class Womandto extends UserWrapper {
+import com.vlm.cityhall.model.Wedding;
 
+public class Womandto extends UserWrapper {
+	private Wedding wedding;
+
+	public Wedding getWedding() {
+		return wedding;
+	}
+
+	public void setWedding(Wedding wedding) {
+		this.wedding = wedding;
+	}
+	
 }
