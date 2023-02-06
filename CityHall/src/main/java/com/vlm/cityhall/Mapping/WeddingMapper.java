@@ -15,6 +15,8 @@ public class WeddingMapper {
 		wedding.setDate_of_wedding(LocalDate.parse(weddingdto.getDate_of_wedding()));
 		wedding.setId(weddingdto.getId());
 		wedding.setLocation(weddingdto.getLocation());
+		wedding.setMan(weddingdto.getMan());
+		wedding.setWoman(weddingdto.getWoman());
 		return wedding;
 	}
 	
@@ -23,6 +25,8 @@ public class WeddingMapper {
 		weddingdto.setDate_of_wedding(wedding.getDate_of_wedding().toString());
 		weddingdto.setId(wedding.getId());
 		weddingdto.setLocation(wedding.getLocation());
+		weddingdto.setMan(wedding.getMan());
+		weddingdto.setWoman(wedding.getWoman());
 		return weddingdto;
 	}
 }
