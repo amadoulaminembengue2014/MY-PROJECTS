@@ -14,6 +14,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import com.google.common.base.Strings;
 import com.vlm.shop.Constents.ShopConstants;
 import com.vlm.shop.Dao.UserDao;
 import com.vlm.shop.Entity.User;
@@ -118,6 +119,8 @@ public class UserServiceImpl implements UserService {
 		return new ResponseEntity<String>("{\"message\":\""+"Bad Credentials."+"\"}", HttpStatus.BAD_REQUEST);
 
 	}
+	
+	
 
 	@Override
 	public ResponseEntity<List<UserWrapper>> getAllUser() {
@@ -132,6 +135,8 @@ public class UserServiceImpl implements UserService {
 		}
 		return new ResponseEntity<>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	
 
 	@Override
 	public ResponseEntity<String> update(Map<String, String> requestMap) {
@@ -162,6 +167,49 @@ public class UserServiceImpl implements UserService {
 			emailUtils.sendSimpleMessage(jwtFilter.getCurrentUser(), "Account Disabled", "USER:- " + user + " \n is approved by \nADMIN:-" + jwtFilter.getCurrentUser(), allAdmin);
 
 		}
+	}
+	
+	
+
+	@Override
+	public ResponseEntity<String> checkToken() {
+		return ShopUtils.getResponseEntity("true", HttpStatus.OK);
+	}
+	
+	
+
+	@Override
+	public ResponseEntity<String> changePassword(Map<String, String> requestMap) {
+		try {
+			User userObj = userDao.findByEmail(jwtFilter.getCurrentUser());
+			if(!userObj.equals(null)) {
+				if(!userObj.getPassword().equals(requestMap.get("oldPassword"))) {
+					userObj.setPassword(requestMap.get("newPassword"));
+					userDao.save(userObj);
+					return ShopUtils.getResponseEntity("Password Updated Successfully", HttpStatus.OK);
+				}
+				return ShopUtils.getResponseEntity("Incorrect Old Password", HttpStatus.BAD_REQUEST);
+			}
+		return ShopUtils.getResponseEntity(ShopConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+		}catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return ShopUtils.getResponseEntity(ShopConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	
+
+	@Override
+	public ResponseEntity<String> forgotPassword(Map<String, String> requestMap) {
+		try {
+			User user = userDao.findByEmail(requestMap.get("email"));
+			if(!Objects.isNull(user) && !Strings.isNullOrEmpty(user.getEmail()))
+				emailUtils.forgotMail(user.getEmail(), "Credentials by Shop management System", user.getPassword());
+			return ShopUtils.getResponseEntity("Check your mail for Credentials", HttpStatus.OK);
+		}catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return ShopUtils.getResponseEntity(ShopConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 
