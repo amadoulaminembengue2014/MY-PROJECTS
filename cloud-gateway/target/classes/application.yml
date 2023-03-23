@@ -1,3 +1,4 @@
+
 spring:
   application:
    name: GETAWAY-SERVICE
@@ -9,13 +10,24 @@ spring:
         uri: lb://ORDER-SERVICE
         predicates:
           - Path=/order/**
-      - id: r1
+        filters:
+          - AutheticationFilter
+          
+      - id: r2
         uri: lb://PAYMENT-SERVICE
         predicates:
           - Path=/payment/**
+        filters:
+          - AutheticationFilter
+          
+      - id: r3
+        uri: lb://IDENTITY-SERVICE
+        predicates:
+          - Path=/auth/**
     
 
     
 server:
  port: 2525
+
  
