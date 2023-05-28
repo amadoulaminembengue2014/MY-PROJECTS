@@ -1,0 +1,4 @@
+MONGO_DATABASE="movie-api-db"
+MONGO_USER="root"
+MONGO_PASSWORD="25032014Nkd"
+MONGO_CLUSTER="cluster0.2oervjg.mongodb.net"
