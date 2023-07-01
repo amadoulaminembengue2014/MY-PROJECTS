@@ -21,7 +21,7 @@ public class Seance {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIME)
 	private Date heureDebut;
 	@OneToMany(mappedBy = "seance")
 	private Collection<Projection> projections;

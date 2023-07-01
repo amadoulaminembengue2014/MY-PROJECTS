@@ -20,7 +20,7 @@ public class Projection {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Date dateProjections;
+	private Date dateProjection;
 	private double prix;
 	@ManyToOne
 	private Salle salle;
