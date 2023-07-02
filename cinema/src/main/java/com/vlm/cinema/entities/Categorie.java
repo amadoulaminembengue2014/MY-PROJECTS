@@ -2,6 +2,9 @@ package com.vlm.cinema.entities;
 
 import java.util.Collection;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +25,7 @@ public class Categorie {
 	@Column(length = 75)
 	private String name;
 	@OneToMany(mappedBy = "categorie")
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private Collection<Film> films;
 
 }
