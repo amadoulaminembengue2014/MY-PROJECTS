@@ -1,6 +1,7 @@
 package com.kangamit.gestionstockbackend.features.supplier.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kangamit.gestionstockbackend.features.supplier.entity.Supplier;
+import com.kangamit.gestionstockbackend.features.supplier.repository.SupplierRepository;
 import com.kangamit.gestionstockbackend.features.supplier.service.SupplierService;
 
 @Controller
@@ -23,6 +25,9 @@ public class SupplierController {
 	
 	@Autowired
 	private SupplierService supplierService;
+	
+	@Autowired
+	private SupplierRepository supplierRepository;
 	
 	@PostMapping("/createSupplier")
 	public Supplier save(@RequestBody Supplier supplier) {
@@ -41,7 +46,19 @@ public class SupplierController {
 	
 	@PutMapping("/updateSupplier/{id}")
 	public Supplier update(@RequestBody Supplier supplier, @PathVariable Long id) {
-		return supplierService.updateSupplier(supplier, id);
+		Optional<Supplier> result = supplierRepository.findById(id);
+		Supplier supplier1 = null;
+		if(result.isPresent()) {
+			supplier1 = result.get();
+			supplier1.setFirstName(supplier.getFirstName());
+			supplier1.setAddress(supplier.getAddress());
+			supplier1.setEmail(supplier.getEmail());
+			supplier1.setCode(supplier.getCode());
+			supplier1.setPassword(supplier.getPassword());
+			supplier1.setPhoneNumber(supplier.getPhoneNumber());
+		}
+		supplier1  = supplierRepository.save(supplier1);
+		return supplier1;
 	}
 	
 	@DeleteMapping("/deleteSupplier/{id}")
