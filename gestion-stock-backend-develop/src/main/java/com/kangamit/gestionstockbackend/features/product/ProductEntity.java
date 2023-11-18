@@ -1,13 +1,11 @@
 package com.kangamit.gestionstockbackend.features.product;
 
 import com.kangamit.gestionstockbackend.features.categorie.CategoryEntity;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @RequiredArgsConstructor
 @Getter

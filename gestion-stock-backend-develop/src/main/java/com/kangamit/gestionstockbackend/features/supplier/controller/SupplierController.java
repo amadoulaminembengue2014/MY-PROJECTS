@@ -51,6 +51,7 @@ public class SupplierController {
 		if(result.isPresent()) {
 			supplier1 = result.get();
 			supplier1.setFirstName(supplier.getFirstName());
+			supplier1.setLastName(supplier.getLastName());
 			supplier1.setAddress(supplier.getAddress());
 			supplier1.setEmail(supplier.getEmail());
 			supplier1.setCode(supplier.getCode());
